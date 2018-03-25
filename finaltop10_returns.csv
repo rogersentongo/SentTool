@@ -1,0 +1,11 @@
+,Ticker,2018-03-23,Sentiment,Polarity,Name,Sector
+0,XL,27.34,Positive,0.087,Xilinx Inc,Information Technology
+1,MU,16.51,Positive,0.193,Micron Technology,Information Technology
+2,NRG,12.76,Positive,0.005,NRG Energy,Utilities
+3,ADSK,11.29,Neutral,0.0,Autodesk Inc,Information Technology
+4,MCHP,10.39,Neutral,0.0,Microchip Technology,Information Technology
+5,RRC,8.92,Neutral,0.0,Range Resources Corp.,Energy
+6,MPC,6.69,Positive,0.068,Marathon Petroleum,Energy
+7,STX,5.61,Positive,0.047,Seagate Technology,Information Technology
+8,NFLX,5.25,Positive,0.079,Netflix Inc.,Information Technology
+9,WYNN,5.24,Positive,0.09300000000000001,Wynn Resorts Ltd,Consumer Discretionary

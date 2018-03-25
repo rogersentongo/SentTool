@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Sentiment Analysis Tool</title>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+
+
+      <link rel="stylesheet" href="static/css/style1.css?v=<?=time();?>">
+
+
+</head>
+
+<body>
+
+  <section>
+  <!--for demo wrap-->
+  <h1>Simple Sentiment Analysis Tool</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Stock Ticker</th>
+          <th>30 Day Return</th>
+          <th>Sentiment</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {% for ticker, return, senti in table_values %}
+        <tr>
+            <td>{{ticker}}</td>
+            <td>{{return}}%</td>
+            <td>{{senti}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+<section>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Stock Ticker</th>
+          <th>30 Day Return</th>
+          <th>Sentiment</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {% for ticker, return, senti in table_values1 %}
+        <tr>
+            <td>{{ticker}}</td>
+            <td>{{return}}%</td>
+            {% if senti == 'Positive' or senti == 'Very Positive' or senti == 'Extremely Positive' %}
+              <div class="green"><td>{{senti}}</td></div>
+            {% elif senti == 'Negative' or senti == 'Very Negative' or senti == 'Extremely Negative'%}
+              <div class="red"><td>{{senti}}</td></div>
+            {% else %}
+              <div class='white'><td>{{senti}}</td></div>
+            {% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<!-- follow me template -->
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+
+    <script  src="static/js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
