@@ -4,8 +4,8 @@ import pandas_datareader.data as web
 import quandl
 from datetime import datetime, timedelta
 
-dp = pd.read_csv('ytd_returns.csv', index_col=0)
-const = pd.read_csv('constituents.csv')
+dp = pd.read_csv('csv/ytd_returns.csv', index_col=0)
+const = pd.read_csv('csv/constituents.csv')
 dp['Name'] = None
 dp['Sector'] = None
 dp = dp.copy()
@@ -23,10 +23,10 @@ for index_no in range(length):
     dp['Name'][index_no] = name
     dp['Sector'][index_no] = sector
 
-dp.to_csv('finalytd_returns.csv')
+dp.to_csv('csv/finalytd_returns.csv')
 
-dp = pd.read_csv('oneyear_returns.csv', index_col=0)
-const = pd.read_csv('constituents.csv')
+dp = pd.read_csv('csv/oneyear_returns.csv', index_col=0)
+const = pd.read_csv('csv/constituents.csv')
 dp['Name'] = None
 dp['Sector'] = None
 dp = dp.copy()
@@ -44,10 +44,10 @@ for index_no in range(length):
     dp['Name'][index_no] = name
     dp['Sector'][index_no] = sector
 
-dp.to_csv('finaloneyr_returns.csv')
+dp.to_csv('csv/finaloneyr_returns.csv')
 
-dp = pd.read_csv('finalbottom10.csv', index_col=0)
-const = pd.read_csv('constituents.csv')
+dp = pd.read_csv('csv/finalbottom10.csv', index_col=0)
+const = pd.read_csv('csv/constituents.csv')
 dp['Name'] = None
 dp['Sector'] = None
 dp = dp.copy()
@@ -67,8 +67,8 @@ for index_no in range(length):
 
 dp.to_csv('finalbottom10_returns.csv')
 
-dp = pd.read_csv('finaltop10.csv', index_col=0)
-const = pd.read_csv('constituents.csv')
+dp = pd.read_csv('csv/finaltop10.csv', index_col=0)
+const = pd.read_csv('csv/constituents.csv')
 dp['Name'] = None
 dp['Sector'] = None
 dp = dp.copy()
@@ -86,4 +86,4 @@ for index_no in range(length):
     dp['Name'][index_no] = name
     dp['Sector'][index_no] = sector
 
-dp.to_csv('finaltop10_returns.csv')
+dp.to_csv('csv/finaltop10_returns.csv')

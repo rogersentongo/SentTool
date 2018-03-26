@@ -23,8 +23,8 @@ def index():
 @app.route('/results')
 def result():
     #We're going to import a dataframe then submit it into a table
-    top10 = pd.read_csv('finaltop10_returns.csv', index_col=0)
-    bottom10 = pd.read_csv('finalbottom10_returns.csv', index_col=0)
+    top10 = pd.read_csv('csv/finaltop10_returns.csv', index_col=0)
+    bottom10 = pd.read_csv('csv/finalbottom10_returns.csv', index_col=0)
 
     top_Ticker = top10['Ticker'].tolist()
     colname = top10.columns[1]
@@ -48,8 +48,8 @@ def result():
 @app.route('/returns')
 def returns():
     #We're going to import a dataframe then submit it into a table
-    ytd = pd.read_csv('finalytd_returns.csv', index_col=0)
-    oneyear = pd.read_csv('finaloneyr_returns.csv', index_col=0)
+    ytd = pd.read_csv('csv/finalytd_returns.csv', index_col=0)
+    oneyear = pd.read_csv('csv/finaloneyr_returns.csv', index_col=0)
 
     ytd_Ticker = ytd['Ticker'].tolist()
     colname = ytd.columns[1]

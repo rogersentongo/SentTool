@@ -5,9 +5,9 @@ from datetime import datetime, timedelta, date
 
 
 #We read the csv data into three dataframes
-thirty_day = pd.read_csv('30DayStocks.csv', index_col=0)
-one_year = pd.read_csv('OneyearStocks.csv', index_col=0)
-ytd = pd.read_csv('YTDStocks.csv', index_col=0)
+thirty_day = pd.read_csv('csv/30DayStocks.csv', index_col=0)
+one_year = pd.read_csv('csv/OneyearStocks.csv', index_col=0)
+ytd = pd.read_csv('csv/YTDStocks.csv', index_col=0)
 
 #Function that creates final returns dataframe
 def final_returns(dataframe):
@@ -57,7 +57,7 @@ print(Top10)
 print(Bottom10)
 
 
-ytd_returns.to_csv('ytd_returns.csv')
-oneyear_returns.to_csv('oneyear_returns.csv')
-Top10.to_csv('Top10.csv')
-Bottom10.to_csv('Bottom10.csv')
+ytd_returns.to_csv('csv/ytd_returns.csv')
+oneyear_returns.to_csv('csv/oneyear_returns.csv')
+Top10.to_csv('csv/Top10.csv')
+Bottom10.to_csv('csv/Bottom10.csv')

@@ -6,7 +6,7 @@ from datetime import datetime, timedelta, date
 quandl.ApiConfig.api_key= "Insert your key here"
 
 
-newlist = pd.read_csv('constituents.csv')
+newlist = pd.read_csv('csv/constituents.csv')
 newerlist = pd.Series(newlist['Symbol'])
 newestlist = newerlist.tolist()
 
@@ -56,19 +56,19 @@ Thirty_now = now - timedelta(30)
 Thirty_now = Thirty_now.strftime('%Y-%m-%d')
 #Datetime now
 Date_now = now.strftime('%Y-%m-%d')
-csvname = '30DayStocks.csv'
+csvname = 'csv/30DayStocks.csv'
 
 get_adjclose(tickerlist, Date_now, Thirty_now, csvname)
 
 #Function call for 360 days
 oneyear = now - timedelta(360)
 oneyear = oneyear.strftime('%Y-%m-%d')
-csvname1 = 'OneyearStocks.csv'
+csvname1 = 'csv/OneyearStocks.csv'
 
 get_adjclose(tickerlist, Date_now, oneyear, csvname1)
 
 #Function call for year to date
 YTD = date(date.today().year, 1, 1)
-csvname2 = 'YTDStocks.csv'
+csvname2 = 'csv/YTDStocks.csv'
 
 get_adjclose(tickerlist, Date_now, YTD, csvname2)

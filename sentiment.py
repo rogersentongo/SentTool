@@ -9,8 +9,8 @@ from collections import OrderedDict
 
 newsapi = NewsApiClient(api_key='Insert your key here')
 
-top10 = pd.read_csv('Top10.csv', index_col=0)
-bottom10 = pd.read_csv('Bottom10.csv', index_col=0)
+top10 = pd.read_csv('csv/Top10.csv', index_col=0)
+bottom10 = pd.read_csv('csv/Bottom10.csv', index_col=0)
 
 #datetime variables
 datetime_now = datetime.now()
@@ -244,9 +244,6 @@ bottom10_stocks=bottom10_stocks.rename(columns={0:'Polarity'})
 top10_stocks = top10_stocks.round({'Polarity': 3})
 bottom10_stocks = bottom10_stocks.round({'Polarity': 3})
 
-# colname = Top10.columns[1]
-# top10_stocks = top10_stocks.round({colname: 2})
-# bottom10_stocks = bottom10_stocks.round({colname: 2})
 
-top10_stocks.to_csv('finaltop10.csv')
-bottom10_stocks.to_csv('finalbottom10.csv')
+top10_stocks.to_csv('csv/finaltop10.csv')
+bottom10_stocks.to_csv('csv/finalbottom10.csv')
